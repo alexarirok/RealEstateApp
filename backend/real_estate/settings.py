@@ -157,3 +157,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSIONS = 0o644
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

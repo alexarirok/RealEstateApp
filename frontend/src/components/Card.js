@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const card = (props) => {
     const numberWithCommas = (x) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
     };
 
     return (
@@ -14,7 +13,7 @@ const card = (props) => {
             <div className='card__header'>
                 <img className='card__header__photo' src={props.photo_main} alt='House' />
             </div>
-            <p className='card__location'>{props.address}, {props.city}, {props.county}</p>
+            <p className='card__location'>{props.address}, {props.city}, {props.state}</p>
             <div className='row'>
                 <div className='col-2-of-3'>
                     <p className='card__info'>Price: ${numberWithCommas(props.price)}</p>
@@ -35,7 +34,7 @@ const card = (props) => {
 card.propTypes = {
     title: PropTypes.string.isRequired,
     photo_main: PropTypes.string.isRequired,
-    address: PropTypes.number.isRequired,
+    address: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     county: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
@@ -44,7 +43,7 @@ card.propTypes = {
     sale_type: PropTypes.string.isRequired,
     home_type: PropTypes.string.isRequired,
     sqft: PropTypes.number.isRequired,
-    slug: PropTypes.string.isRequired
+    slug: PropTypes.string.isRequired,
 };
 
 export default card;

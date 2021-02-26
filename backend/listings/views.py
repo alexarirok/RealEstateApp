@@ -171,7 +171,9 @@ class SearchView(APIView):
                 count += 10
             if query.photo_11:
                 count += 11
-            
+            if query.photo_12:
+                count += 12
+
             if count < has_photos:
                 slug = query.slug
                 queryset = queryset.exclude(slug__iexact=slug)

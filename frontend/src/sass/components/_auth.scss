@@ -13,7 +13,7 @@
 
     &__lead {
         font-size: 2.4rem;
-        color: $color-secondary;
+        color: $color-quaternary;
         margin-bottom: 2rem;
     }
 
@@ -21,11 +21,13 @@
         &__group {
             margin-bottom: 1rem;
         }
+
         &__input {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             padding: 1rem 1.5rem;
-            outline-color: $color-primary;
+            outline-color: $color-quaternary;
         }
+
         &__button {
             font-size: 1.8rem;
             padding: 0.5rem 0;
@@ -46,16 +48,18 @@
             }
         }
     }
+
     &__authtext {
         font-size: 1.6rem;
         color: $color-paragraph;
 
         &__link {
             text-decoration: none;
-            color: $color-primary;
+            color: $color-quaternary;
+            font-size: 1.8rem;
 
             &:hover {
-                color: $color-link-hover;
+                color: $color-primary;
             }
         }
     }

@@ -33,7 +33,7 @@ const ListingForm = (props) => {
         };
 
         setLoading(true);
-        axios.post(`${process.env.REACT_APP_API_URL}/api/listings/search`, { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }, config)
+        axios.post(`${process.env.REACT_APP_API_URL}/api/listings/search/`, { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }, config)
         .then(res => {
             setLoading(false);
             props.setListings(res.data);
@@ -78,8 +78,9 @@ const ListingForm = (props) => {
                             <option>$600,000+</option>
                             <option>$800,000+</option>
                             <option>$1,000,000+</option>
-                            <option>$1,200,000+</option>
-                            <option>$1,500,000+</option>
+                            <option>$5,000,000+</option>
+                            <option>$10,000,000+</option>
+                            <option>$20,000,000+</option>
                             <option>Any</option>
                         </select>
                     </div>
@@ -91,6 +92,7 @@ const ListingForm = (props) => {
                             <option>5 of less</option>
                             <option>10 of less</option>
                             <option>20 of less</option>
+                            <option>30 of less</option>
                             <option>Any</option>
                         </select>
                     </div>
@@ -106,6 +108,7 @@ const ListingForm = (props) => {
                             <option>3+</option>
                             <option>4+</option>
                             <option>5+</option>
+                            <option>Any</option>
                         </select>
                     </div>
                     <div className='listingform__section'>
@@ -114,8 +117,9 @@ const ListingForm = (props) => {
                             <option>1+</option>
                             <option>3+</option>
                             <option>5+</option>
+                            <option>8+</option>
                             <option>10+</option>
-                            <option>15+</option>
+                            <option>11+</option>
                         </select>
                     </div>
                 </div>
@@ -144,6 +148,7 @@ const ListingForm = (props) => {
                             <option>2+</option>
                             <option>3+</option>
                             <option>4+</option>
+                            <option>Any</option>
                         </select>
                     </div>
                     <div className='listingform__altsection'>

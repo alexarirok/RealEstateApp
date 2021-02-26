@@ -10,13 +10,15 @@ html {
     font-size: 62.5%;
 
     @include respond(tab-land) {
-        font-size: 56.5%;
+        font-size: 56.25%;
     }
+
     @include respond(tab-port) {
         font-size: 50%;
     }
+
     @include respond(phone) {
-        font-size: 80;
+        font-size: 80%;
     }
 }
 
@@ -30,5 +32,5 @@ body {
 }
 
 ::selection {
-    background-color: rgba($color-primary, 0.25);
+    background-color: rgba($color-primary, 0.3);
 }

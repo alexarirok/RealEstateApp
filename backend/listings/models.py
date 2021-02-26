@@ -39,6 +39,7 @@ class Listing(models.Model):
     photo_9 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_10 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_11 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    photo_12 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=now, blank=True)
 
